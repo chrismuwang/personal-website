@@ -1,0 +1,213 @@
+/* Global Styles */
+
+* {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #616161;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+/* Text */
+
+/* h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h1, h2 {
+  font-weight: lighter;
+}
+
+p {
+  font-size: 14px;
+} */
+
+/* Hyperlink */
+
+a {
+  cursor: pointer;
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Input */
+
+input {
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #BDBDBD;
+}
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+  text-transform: uppercase;
+}
+
+/* Button */
+.button, button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+}
+
+.button:hover, button:hover {
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.button:disabled, button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+/* Fancy Button */
+
+.fancy-button {
+  background-color: white;
+  color: #1976d2;
+}
+
+.fancy-button i.material-icons {
+  color: #1976d2;
+  padding-right: 4px;
+}
+
+p {
+  font-family: Lato;
+}
+
+.main-container{
+  height: 100vh;
+}
+
+.mat-drawer{
+  padding-right: 2vw;
+  padding-left: 2vw;
+  width: 70vh;
+  height: 100%;
+}
+
+.mat-drawer-content{
+  padding-left: 2vw;
+  background-color: #1d4fa1;
+  height: 100%;
+}
+
+.center {
+  position: absolute;
+  display: block;
+  left: 30%;
+  width: 40%;
+  /* display: block; */
+  /* margin: auto; */
+  margin-top: 3vh;
+  z-index: 0;
+  /* width: 40%; */
+}
+
+.carouselimg {
+  position: relative+
+  ;
+  width: 30%;
+  left: 30%;
+  margin-top: 3.1vh;
+}
+
+.app{
+  position: absolute;
+  width: 16%;
+  z-index: 2;
+}
+
+:host{
+  padding: 0px;
+}
+
+h1{
+  line-height: 0%;
+  font-size: 100px;
+  font-weight: 600;
+
+  -webkit-animation: animateHeader 1.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: animateHeader 1.5s; /* Firefox < 16 */
+  -ms-animation: animateHeader 1.5s; /* Internet Explorer */
+  -o-animation: animateHeader 1.5s; /* Opera < 12.1 */
+  animation: animateHeader 1.5s;
+  animation-fill-mode: forwards;
+}
+
+h2{
+  font-size: 95px;
+  font-weight: 600;
+  margin-top: 0px;
+  line-height: 0%;
+  visibility: hidden;
+  color: #363636;
+
+  -webkit-animation: animateHeaderTwo 1.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: animateHeaderTwo 1.5s; /* Firefox < 16 */
+  -ms-animation: animateHeaderTwo 1.5s; /* Internet Explorer */
+  -o-animation: animateHeaderTwo 1.5s; /* Opera < 12.1 */
+  animation: animateHeaderTwo 1.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+h3{
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 5vh;
+  visibility: hidden;
+
+  -webkit-animation: animateBody 1.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: animateBody 1.5s; /* Firefox < 16 */
+  -ms-animation: animateBody 1.5s; /* Internet Explorer */
+  -o-animation: animateBody 1.5s; /* Opera < 12.1 */
+  animation: animateBody 1.5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animateHeader {
+  from { opacity: 0; margin-top: 0%; }
+  to   { opacity: 1; margin-top: 7vh; }
+}
+
+@keyframes animateHeaderTwo {
+  from { opacity: 0; margin-top: 7vh; visibility: hidden; }
+  to   { opacity: 1; margin-top: 11vh; visibility: visible;}
+}
+
+@keyframes animateBody {
+  from { opacity: 0; visibility: hidden; }
+  to   { opacity: 1; visibility: visible;}
+}

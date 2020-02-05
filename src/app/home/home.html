@@ -1,0 +1,19 @@
+<mat-drawer-container class="main-container">
+  <mat-drawer mode="side" opened >
+    <h1>hey,</h1>
+    <h2>i'm christina</h2>
+    <br>
+    <h3>Welcome to my website!</h3>
+  </mat-drawer>
+  <mat-drawer-content opened>
+    <div *ngIf = "phoneView; else pageView" class = "center">
+        <img src = "assets/images/iphone.png" alt = "iPhone Navigation" style = "width: 100%"/>
+        <img src = "assets/images/aboutmeicon.png" alt = "About Me" class = "app" style = "top: 10%; left: 15%;" routerLink = "/about-me"/>
+        <img src = "assets/images/projectsicon.png" alt = "Projects" class = "app" style = "top: 10%; left: 43%;" routerLink = "/projects"/>
+        <img src = "assets/images/skillsicon.png" alt = "About Me" class = "app" style = "top: 10%; left: 70%;" routerLink = "/skills"/>
+        <img src = "assets/images/resumeicon.png" alt = "Projects" class = "app" style = "top: 25%; left: 15%;" routerLink = "/resume"/>
+        <img src = "assets/images/connecticon.png" alt = "About Me" class = "app" style = "top: 25%; left: 43%;" routerLink = "/connect"/>
+        <img src = "assets/images/homeicon.png" alt = "About Me" class = "app" style = "top: 82%; left: 43%;" routerLink = ""/>
+      </div>
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,61 @@
+<mat-drawer-container class="main-container">
+  <mat-drawer mode="side" opened>
+    <h1>about me</h1>
+    <h3><br>I'm a second year computer science student at the University of Western Ontario.</h3>
+  </mat-drawer>
+  <mat-drawer-content opened>
+    <div *ngIf = "phoneView; else pageView" class = "center">
+      <img src = "assets/images/iphone.png" alt = "iPhone Navigation" style = "width: 100%"/>
+      <img src = "assets/images/aboutmeicon.png" alt = "About Me" class = "app" style = "top: 10%; left: 15%;" routerLink = "/about-me"/>
+      <img src = "assets/images/projectsicon.png" alt = "Projects" class = "app" style = "top: 10%; left: 43%;" routerLink = "/projects"/>
+      <img src = "assets/images/skillsicon.png" alt = "About Me" class = "app" style = "top: 10%; left: 70%;" routerLink = "/skills"/>
+      <img src = "assets/images/resumeicon.png" alt = "Projects" class = "app" style = "top: 25%; left: 15%;" routerLink = "/resume"/>
+      <img src = "assets/images/connecticon.png" alt = "About Me" class = "app" style = "top: 25%; left: 43%;" routerLink = "/connect"/>
+      <img src = "assets/images/homeicon.png" alt = "About Me" class = "app" style = "top: 82%; left: 43%;" routerLink = ""/>
+    </div>
+    <ng-template #pageView>
+      <img src = "assets/images/iphone.png" alt = "iPhone Navigation" class="center"/>
+      <ngb-carousel *ngIf="images" style = "z-index: 20; position: relative;">
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper" style = "size: 30%">
+            <img class = "carouselimg" [src]="images[0]" alt="Random first slide">
+          </div>
+          <div class="carousel-caption">
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+      <!-- <ngb-carousel>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="assets/images/homeicon.png" alt="Random first slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit elibeero, a pha retra augue mollis interdum.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src = "assets/images/homeicon.png" alt="Random second slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src = "assets/images/homeicon.png" alt="Random third slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </ng-template>
+        </ngb-carousel> -->
+      <img src = "assets/images/homeicon.png" alt = "About Me" class = "app" style = "top: 82%; left: 43%" (click) = "changeView()"/>
+    </ng-template>
+  </mat-drawer-content>
+</mat-drawer-container>
